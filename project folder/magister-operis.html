@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Magister Operis</title>
+        <link rel="stylesheet" href="project-styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="product">
+                <div class="gallery">
+                    <img src="project images/magister operis.PNG" alt="" id="productImg">
+                    <div class="controls">
+                        <span class="btn active"></span>
+                        <span class="btn"></span>
+                        <span class="btn"></span>
+                    </div>
+                </div>
+                <div class="details">
+                    <h1>Magister Operis</h1>
+                    <h2>Role: Developer</h2>
+                    <p>Magister Operis is a user-friendly platform designed to connect people with skilled home service providers. Whether you need a Plumber, Electrician, Painter, Web services, and even a makeup artist, Magister Operis makes it easy to find and hire professionals quickly. Users can search for services, read reviews, and get cost estimates for their projects. Providers can also register on the app to offer their services and expand their customer base.</p>
+                    <button onclick="redirect()">Visit Site!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            function redirect() {
+                window.location.href = ""
+            }
+
+            let productImg = document.getElementById("productImg");
+            let btn = document.getElementsByClassName("btn")
+
+            btn[0].onclick = function(){
+                productImg.src = "project images/magister operis.PNG";
+
+                for(bt of btn){
+                    bt.classList.remove("active");
+                }
+                this.classList.add("active")
+            }
+            btn[1].onclick = function(){
+                productImg.src = "img/Snapchat-170318500.jpg";
+
+                for(bt of btn){
+                    bt.classList.remove("active");
+                }
+                this.classList.add("active")
+            }
+            btn[2].onclick = function(){
+                productImg.src = "img/Snapchat-621895362.jpg";
+
+                for(bt of btn){
+                    bt.classList.remove("active");
+                }
+                this.classList.add("active")
+            }
+        </script>
+    </body>
+</html>

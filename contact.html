@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="intro">
+                <div class="yellow-dot"></a></div>
+                <div>
+                    <a href="index.html"><h2>Jeremiah Tani</h2></a>
+                </div>
+            </div>
+            <nav>
+                <div class="menu-icon" id="menu-icon"><img onclick="toggleSidebar()" src="img/icons/hamburger.png" id="menu-img" alt="Menu-Icon" width="40" height="40"></div>
+                <div id="sidebar" class="sidebar">
+                    <div class="menu-icon">
+                        <img onclick="toggleSidebar()" src="img/icons/close.png" alt="#close-sidebar" width="40" height="40">
+                    </div>
+                    <ul id="nav-links" class="nav-links">
+                        <li><a href="resume.html">Resume</a></li>
+                        <li class="p-style"><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div class="main-contact">
+            <div class="contact-con">
+                <div>
+                    <h1>Got ideas? We've got the skills. Get in touch! &#x1F44B;</h1>
+                </div>
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <div class="contact-cred">
+                        <div>
+                            <label for="name">Name</label>
+                <br>
+                            <input class="name-box" type="text" id="name" name="Your Name" required ><br><br>
+                        
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                <br>
+                            <input class="email-box" type="email" id="email" name="Your Email" required><br><br>
+                                    
+                        </div>
+                    </div>
+    
+                    <div class="contact-int">
+                        <div>
+                            <label for="interest">What are you interested in?</label>
+                <br>
+                            <select class="int-box" name="interest" id="interest">
+                                <option value="seo-services">SEO Services</option>
+                                <option value="website-development">Website Development</option>
+                                <option value="app-design">App Design</option>
+                                <option value="website-design">Website Design</option>
+                            </select><br><br>
+                        </div>
+                        
+                        <div>
+                            <label for="budget">Project Budget</label>
+                <br>
+                            <select class="bud-box" name="budget" id="budget">
+                                <option value="Select your budget">Select your budget</option>
+                                <option value="amount">100k</option>
+                                <option value="amount">200k</option>
+                                <option value="amount">300k</option>
+                                <option value="amount">400k</option>
+                                <option value="amount">500k</option>
+                            </select><br><br>
+                        </div>
+            
+                    </div>
+    
+                    <div class="contact-mes">
+                        <label for="">Message
+            <br>
+                            <textarea class="msg-box" name="message" id="message" placeholder="Let us know about your project." required></textarea>
+                        </label><br><br>
+                            
+                    </div>
+                    <input class="contact-sub" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+        
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="script.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Magister Operis Shop</title>
+        <link rel="stylesheet" href="project-styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="product">
+                <div class="gallery">
+                    <img src="project images/magister operis shop.PNG" alt="" id="productImg">
+                    <div class="controls">
+                        <span class="btn active"></span>
+                        <span class="btn"></span>
+                        <span class="btn"></span>
+                    </div>
+                </div>
+                <div class="details">
+                    <h1>Magister Operis Shop</h1>
+                    <h2>Role: Developer</h2>
+                    <p>Magister Operis Shop is a user-friendly platform built alongside the Magister operis platform designed to offer products relevant to your projects being offered by the home service providers. Whether you are hiring Plumber, Electrician, Painter, Web services, and even a makeup artist, Magister Operis Shop makes it easy to find and purchase all the relevant products related to your project. Users can search for related products, purchase, track their order, and have it delivered to their doorstep. Sellers can also register on the app to promote their products and expand their customer base.</p>
+                    <button onclick="redirect()">Visit Site!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            function redirect() {
+                window.location.href = ""
+            }
+
+            let productImg = document.getElementById("productImg");
+            let btn = document.getElementsByClassName("btn")
+
+            btn[0].onclick = function(){
+                productImg.src = "project images/magister operis shop.PNG";
+
+                for(bt of btn){
+                    bt.classList.remove("active");
+                }
+                this.classList.add("active")
+            }
+            btn[1].onclick = function(){
+                productImg.src = "img/Snapchat-170318500.jpg";
+
+                for(bt of btn){
+                    bt.classList.remove("active");
+                }
+                this.classList.add("active")
+            }
+            btn[2].onclick = function(){
+                productImg.src = "img/Snapchat-621895362.jpg";
+
+                for(bt of btn){
+                    bt.classList.remove("active");
+                }
+                this.classList.add("active")
+            }
+        </script>
+    </body>
+</html>

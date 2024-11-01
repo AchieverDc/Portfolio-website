@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio</title>
+        <link rel="stylesheet" href="project-styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="product">
+                <div class="gallery">
+                    <img src="project images/personal portfolio.PNG" alt="" id="productImg">
+                    <div class="controls">
+                        <span class="btn active"></span>
+                        <span class="btn"></span>
+                        <span class="btn"></span>
+                    </div>
+                </div>
+                <div class="details">
+                    <h1>Personal Portfolio</h1>
+                    <h2>Role: Developer</h2>
+                    <p>Very good product. Highly recommended.</p>
+                    <button onclick="redirect()">Visit Site!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            function redirect() {
+                window.location.href = ""
+            }
+
+            let productImg = document.getElementById("productImg");
+            let btn = document.getElementsByClassName("btn")
+
+            btn[0].onclick = function(){
+                productImg.src = "project images/personal portfolio.PNG";
+
+                for(bt of btn){
+                    bt.classList.remove("active");
+                }
+                this.classList.add("active")
+            }
+            btn[1].onclick = function(){
+                productImg.src = "img/Snapchat-170318500.jpg";
+
+                for(bt of btn){
+                    bt.classList.remove("active");
+                }
+                this.classList.add("active")
+            }
+            btn[2].onclick = function(){
+                productImg.src = "img/Snapchat-621895362.jpg";
+
+                for(bt of btn){
+                    bt.classList.remove("active");
+                }
+                this.classList.add("active")
+            }
+        </script>
+    </body>
+</html>
