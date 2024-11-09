@@ -1,9 +1,9 @@
 function toggleSidebar() {
     const sidebar = document.getElementById('sidebar');
-    if (sidebar.style.width === '350px') {
+    if (sidebar.style.width === '300px') {
         sidebar.style.width = '0';
     } else {
-        sidebar.style.width = '350px';
+        sidebar.style.width = '300px';
     }
 }
 

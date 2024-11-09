@@ -5,12 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Magister Operis</title>
         <link rel="stylesheet" href="project-styles.css">
+        <link rel="stylesheet" href="output.css">
     </head>
     <body>
         <div class="container">
             <div class="product">
                 <div class="gallery">
-                    <img src="project images/magister operis.PNG" alt="" id="productImg">
+                    <img src="project images/magister operis.webp" alt="" id="productImg">
                     <div class="controls">
                         <span class="btn active"></span>
                         <span class="btn"></span>
@@ -37,7 +38,7 @@
             let btn = document.getElementsByClassName("btn")
 
             btn[0].onclick = function(){
-                productImg.src = "project images/magister operis.PNG";
+                productImg.src = "project images/magister operis.webp";
 
                 for(bt of btn){
                     bt.classList.remove("active");

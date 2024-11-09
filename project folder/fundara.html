@@ -5,12 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fundara</title>
         <link rel="stylesheet" href="project-styles.css">
+        <link rel="stylesheet" href="output.css">
     </head>
     <body>
         <div class="container">
             <div class="product">
                 <div class="gallery">
-                    <img src="project images/fundara.PNG" alt="" id="productImg">
+                    <img src="project images/fundara.webp" alt="" id="productImg">
                     <div class="controls">
                         <span class="btn active"></span>
                         <span class="btn"></span>
@@ -37,7 +38,7 @@
             let btn = document.getElementsByClassName("btn")
 
             btn[0].onclick = function(){
-                productImg.src = "project images/fundara.PNG";
+                productImg.src = "project images/fundara.webp";
 
                 for(bt of btn){
                     bt.classList.remove("active");
@@ -45,7 +46,7 @@
                 this.classList.add("active")
             }
             btn[1].onclick = function(){
-                productImg.src = "project images/fundara disaster.PNG";
+                productImg.src = "project images/fundara disaster.webp";
 
                 for(bt of btn){
                     bt.classList.remove("active");
@@ -53,7 +54,7 @@
                 this.classList.add("active")
             }
             btn[2].onclick = function(){
-                productImg.src = "img/Snapchat-621895362.jpg";
+                productImg.src = "project images/fundara disaster.webp";
 
                 for(bt of btn){
                     bt.classList.remove("active");
