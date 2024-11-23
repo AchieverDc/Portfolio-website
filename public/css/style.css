@@ -48,7 +48,6 @@ header {
 .intro h2 {
     border-radius: 10%;
     padding: 0 10px;
-    box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.25);
 }
 
 nav {
