@@ -16,7 +16,7 @@ app.use(express.json())
 
 app.get('/', (req, res)=>{
     res.sendFile(__dirname + '/public/index.html')
-})
+});
 
 app.post('/', (req, res)=>{
     console.log(req.body);
@@ -26,8 +26,11 @@ app.post('/', (req, res)=>{
         auth: {
             user: process.env.EMAIL_USER,
             pass: process.env.EMAIL_PASSWORD
-        }
-    })
+        },
+        pool: true,
+        maxConnections: 5,
+        maxMessages: 10,
+    });
 
     const mailOptions = {
         from: req.body.email,
@@ -47,8 +50,8 @@ app.post('/', (req, res)=>{
             res.send('success')
         }
     })
-})
+});
 
 app.listen(PORT, ()=>{
     console.log(`Server running on port${PORT}`)
-})
+});
