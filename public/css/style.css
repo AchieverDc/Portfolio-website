@@ -130,7 +130,7 @@ nav {
 @media (max-width: 1160px) {
     body {
         background: #f9fafa;
-        height: 70vh;
+        height: 75vh;
         width: 100%;
         padding: 0;
         margin: 0;
@@ -153,7 +153,7 @@ nav {
 
 @media (max-width: 1060px) {
     body {
-        height: 150vh;
+        height: 140vh;
     }
 
     .main-con {
@@ -320,6 +320,17 @@ nav {
 .text-con p {
     font-size: 18px;
     animation: appear 1.8s linear;
+}
+
+.stack {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.stack img {
+    width: 70px;
+    height: 70px;
 }
 
 .main-contact {
@@ -1742,13 +1753,13 @@ footer span {
 @media(max-width: 450px) {
     footer {
         margin-bottom: 100px;
-        margin-top: 400px;
+        margin-top: 450px;
     }
 }
 
 @media (max-width: 385px) {
     footer {
-        margin: 350px 5px 0 5px;
+        margin: 420px 5px 0 5px;
     }
 }
 
