@@ -8,7 +8,7 @@ const app = express();
 
 const nodemailer = require('nodemailer');
 
-const PORT = process.env.PORT || 587;
+const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(express.static('public'));
@@ -36,7 +36,7 @@ app.post('/', (req, res)=>{
 
     const mailOptions = {
         from: req.body.email,
-        to: 'teleair96@gmail.com',
+        to: process.env.EMAIL_USER,
         subject: `From: ${req.body.email}
         Phone: ${req.body.phone}
         Interest: ${req.body.interest}`,

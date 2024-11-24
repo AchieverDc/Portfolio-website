@@ -1375,22 +1375,55 @@ main {
 }
 
 @media (max-width: 385px) {
+    header, .main-contact {
+        width: 100%;
+        max-width: 100vw;
+    }
+
+    .addr-con h2 {
+        width: 250px;
+    }
+    
+    .wrk-tag h2 {
+        width: 250px;
+    }
+    
+    .ed-tag h2 {
+        width: 250px;
+    }
+    
+    .skll-tag h2 {
+        width: 250px;
+    }
+
+    .int-tag h2 {
+        width: 250px;
+    }
+    
+    .ref-tag h2 {
+        width: 250px;
+    }
+
     .text-con h1 {
         font-size: 80px;
     }
 
     .contact-cred label, .contact-int label, .contact-mes label {
-        margin-left: 40px;
+        margin-left: 10px;
     }
 
     .contact-sub {
-        margin-left: 40px;
+        margin-left: 10px;
         width: 300px;
     }
 
     .name-box, .email-box, .int-box, .phone-box, .msg-box{
         width: 300px;
-        margin-left: 40px;
+        margin-left: 10px;
+    }
+
+    .auth-pro h1 {
+        font-size: 38px;
     }
 
     div.add-con, div.contact-con, div.wrk-exp, div.ed-des, div.skll-con, div.int-con, div.ref-con {
@@ -1419,18 +1452,28 @@ main {
     }
 
     .icn1-con, .icn2-con, .icn3-con, .icn4-con, .icn5-con {
-        margin-bottom: 10px;
+        width: 100px;
+        margin: 0 40px 10px 0;
+    }
+
+    .c-header {
+        width: 300px;
     }
 
     .contact-con h1 {
-        width: 350px;
+        width: 100%;
+        max-width: 100vw;
         font-size: 25px;
-        margin-left: 35px;
+        margin-left: 10px;
     }
 
     div.yellow-dot2 {
         width: 85px;
         height: 85px;
+    }
+
+    .pr-1 button, .pr-2 button, .pr-3 button, .pr-4 button {
+        margin: auto;
     }
 }
 
@@ -1556,10 +1599,15 @@ main {
         font-size: 60px;
     }
 
-    div.pr-sec, div.rev-head, div.rev-text1, div.rev-text2 {
+    div.pr-sec, div.rev-head, div.rev-text1 {
         margin: 0;
         padding: 0;
         width: 100%;
+        max-width: 100vw;
+    }
+
+    div.rev-text2 {
+        width: 185px;
         max-width: 100vw;
     }
 
@@ -1569,7 +1617,7 @@ main {
     }
 
     .pr-1, .pr-2, .pr-3, .pr-4 {
-        width: 340px;
+        width: 320px;
         height: 350px;
     }
 
@@ -1700,7 +1748,7 @@ footer span {
 
 @media (max-width: 385px) {
     footer {
-        margin-top: 350px;
+        margin: 350px 5px 0 5px;
     }
 }
 
