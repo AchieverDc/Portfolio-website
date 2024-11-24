@@ -9,10 +9,7 @@
     "routes": [
       {
         "src": "/submit",
-        "dest": "/api/server.js"
-      },
-      {
-        "src": "/(.*)",
+        "methods": ["POST"], // Ensure POST is allowed
         "dest": "/api/server.js"
       }
     ]
