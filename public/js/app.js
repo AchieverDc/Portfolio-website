@@ -15,9 +15,9 @@ let interest = document.getElementById('interest');
 let message = document.getElementById('message');
 
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', (e)=>{
     e.preventDefault();
-
+    
     let formData = {
         name: name.value,
         email: email.value,
@@ -26,29 +26,23 @@ contactForm.addEventListener('submit', (e) => {
         message: message.value
     }
 
-    fetch('/submit', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(response => response.text())
-    .then(data => {
-        if (data === 'success') {
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', '/');
+    xhr.setRequestHeader('content-type', 'application/json');
+    xhr.onload = function(){
+        console.log(xhr.responseText);
+        if(xhr.responseText == 'success'){
             alert('Email sent');
             name.value = '';
             email.value = '';
             phone.value = '';
             interest.value = '';
             message.value = '';
-        } else {
-            alert('Something went wrong!');
+        }else{
+            alert('Something went wrong!')
         }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-});
+    }
 
+    xhr.send(JSON.stringify(formData));
+})
 
