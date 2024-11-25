@@ -14,8 +14,7 @@ let phone = document.getElementById('phone');
 let interest = document.getElementById('interest');
 let message = document.getElementById('message');
 
-
-contactForm.addEventListener('submit', (e)=>{
+contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
     let formData = {
@@ -24,25 +23,32 @@ contactForm.addEventListener('submit', (e)=>{
         phone: phone.value,
         interest: interest.value,
         message: message.value
-    }
+    };
 
     let xhr = new XMLHttpRequest();
-    xhr.open('POST', '/');
-    xhr.setRequestHeader('content-type', 'application/json');
-    xhr.onload = function(){
+    xhr.open('POST', '/api/sendEmail'); // Update this line to point to the API endpoint
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    
+    xhr.onload = function() {
         console.log(xhr.responseText);
-        if(xhr.responseText == 'success'){
-            alert('Email sent');
+        if (xhr.status === 200) { // Check for successful response
+            alert('Email sent successfully!');
+            // Clear form fields
             name.value = '';
             email.value = '';
             phone.value = '';
             interest.value = '';
             message.value = '';
-        }else{
-            alert('Something went wrong!')
+        } else {
+            alert('Something went wrong!'); // Handle error cases
         }
-    }
+    };
+
+    xhr.onerror = function() {
+        alert('Request failed. Please try again later.'); // Handle network errors
+    };
 
     xhr.send(JSON.stringify(formData));
-})
+});
+
 
