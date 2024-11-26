@@ -326,6 +326,7 @@ nav {
     margin-top: 20px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .stack img {
@@ -739,7 +740,7 @@ main {
     margin: 30px 0;
 }
 
-.ref1 {
+.ref1, .ref2 {
     width: 150px;
     margin: 0 22px 0 120px;
     border-top: 2px solid black;
@@ -844,7 +845,7 @@ main {
         margin: 0 22px 0 145px;
     }
 
-    .ref1 h2 {
+    .ref1 h2, .ref2 h2 {
         font-size: 19px;
     }
 }
@@ -1017,7 +1018,7 @@ main {
         font-size: 19px;
     }
     
-    .ref1 {
+    .ref1, .ref2 {
         border: none;
         margin: 0 270px 0 0;
     }
@@ -1569,7 +1570,7 @@ main {
     font-size: 70px;
 }
 
-.usr-rev1, .usr-rev2 {
+.usr-rev1, .usr-rev2, .usr-rev3 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1577,20 +1578,20 @@ main {
     margin-bottom: 20px;
 }
 
-.rev-img1 img, .rev-img2 img {
+.rev-img1 img, .rev-img2 img, .rev-img3 img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
 }
 
-.rev-text1, .rev-text2 {
+.rev-text1, .rev-text2, .rev-text3 {
     display: flex;
     align-items: center;
     width: 200px;
     height: 200px;
 }
 
-.rev-text1 blockquote, .rev-text2 blockquote {
+.rev-text1 blockquote, .rev-text2 blockquote, .rev-text3 blockquote {
     font-size: 18px;
 }
 
@@ -1600,7 +1601,7 @@ main {
         width: 400px;
     }
 
-    .usr-rev1, .usr-rev2 {
+    .usr-rev1, .usr-rev2, .usr-rev3 {
         padding-left: 25px;
     }
 }
@@ -1617,7 +1618,7 @@ main {
         max-width: 100vw;
     }
 
-    div.rev-text2 {
+    div.rev-text2, div.rev-text3 {
         width: 185px;
         max-width: 100vw;
     }
@@ -1637,7 +1638,7 @@ main {
 
     }
 
-    .rev-img1 img, .rev-img2 img {
+    .rev-img1 img, .rev-img2 img, .rev-img3 img {
         width: 150px;
         height: 150px;
     }
