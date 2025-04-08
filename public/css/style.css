@@ -1564,7 +1564,8 @@ p {
 .pr-1,
 .pr-2,
 .pr-3,
-.pr-4 {
+.pr-4,
+.pr-5 {
   width: 380px;
   height: 380px;
   background-color: whitesmoke;
@@ -1579,7 +1580,8 @@ p {
 .pr-1 a,
 .pr-2 a,
 .pr-3 a,
-.pr-4 a {
+.pr-4 a,
+.pr-5 a {
   text-decoration: none;
   color: black;
 }
@@ -1717,7 +1719,8 @@ p {
   .pr-1,
   .pr-2,
   .pr-3,
-  .pr-4 {
+  .pr-4,
+  .pr-5 {
     width: 320px;
     height: 350px;
   }
