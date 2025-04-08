@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project Eden</title>
+        <link rel="stylesheet" href="project-styles.css">
+        <link rel="stylesheet" href="output.css">
+    </head>
+    <body>
+        <header>
+            <a href="/projects.html"><img src="/img/icons/back-button.png" alt="Return"></a>
+        </header>
+        <div class="container">
+            <div class="product">
+                <div class="gallery">
+                    <img src="project images/project-eden index.webp" alt="" id="productImg">
+                    <div class="controls">
+                        <span class="btn active"></span>
+                        <span class="btn"></span>
+                        <span class="btn"></span>
+                    </div>
+                </div>
+                <div class="details">
+                    <h1>Project Eden</h1>
+                    <h2>Role: Developer</h2>
+                    <h3>Stack: HTML, CSS, and JavaScript</h3>
+                    <p>Project Eden is a free herbal guide that provides users with natural remedies for ailments searched. It's powered by the Google Flan LLM to answer user medical related queries.</p>
+                    <button onclick="redirect()">Visit Site!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            function redirect() {
+                window.location.href = "https://project-eden-jeta.vercel.app/";
+            }
+
+            let productImg = document.getElementById("productImg");
+            let btn = document.getElementsByClassName("btn")
+
+            btn[0].onclick = function(){
+                productImg.src = "project images/project-eden index.webp";
+
+                for(bt of btn){
+                    bt.classList.remove("active");
+                }
+                this.classList.add("active")
+            }
+            btn[1].onclick = function(){
+                productImg.src = "project images/project-eden home.webp";
+
+                for(bt of btn){
+                    bt.classList.remove("active");
+                }
+                this.classList.add("active")
+            }
+            btn[2].onclick = function(){
+                productImg.src = "project images/project-eden ai-practitioner.webp";
+
+                for(bt of btn){
+                    bt.classList.remove("active");
+                }
+                this.classList.add("active")
+            }
+        </script>
+    </body>
+</html>
