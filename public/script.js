@@ -317,8 +317,8 @@ class PerformanceManager {
   preloadResources() {
     // Preload CV files
     const cvLinks = [
-      "cv/Jeremiah-Tani-Full-Stack-Developer-CV _20250726_175347_0000.pdf",
-      "cv/Jeremiah-Tani-Network-Engineer-CV_20250726_180136_0000.pdf",
+      "/cv/Jeremiah-Tani-Full-Stack-Developer-CV _20250726_175347_0000.pdf",
+      "/cv/Jeremiah-Tani-Network-Engineer-CV_20250726_180136_0000.pdf",
     ];
 
     cvLinks.forEach((link) => {
