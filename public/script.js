@@ -406,7 +406,7 @@ class App {
 // Contact Form Manager
 class FormManager {
   constructor(formId) {
-    this.contactForm = document.getElementById(formId);
+    this.contactForm = document.getElementById("contact-form");
     this.submitBtn = this.contactForm?.querySelector(".submit-btn");
 
     if (this.contactForm) {
@@ -414,7 +414,7 @@ class FormManager {
         this.handleFormSubmit(e)
       );
     } else {
-      console.error(`Form with ID "${formId}" not found.`);
+      console.error(`Form with ID "contact-form" not found.`);
     }
   }
 
