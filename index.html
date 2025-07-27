@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeremiah Tani - Full Stack Developer & Network Engineer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <span>JETA</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li>
+            <button id="theme-toggle" class="theme-btn">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-left">
+            <div class="profile-image">
+              <img
+                src="assets/IMG_20241010_163957_459.webp"
+                alt="Jeremiah Tani"
+                onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjgwIiByPSIzMCIgZmlsbD0iIzlDQTNBRiIvPgo8cGF0aCBkPSJNNTAgMTcwQzUwIDEzNi44NjMgNzYuODYyOSAxMTAgMTEwIDExMEMxNDMuMTM3IDExMCAxNzAgMTM2Ljg2MyAxNzAgMTcwSDE1MFY5NFEiIGZpbGw9IiM5Q0EzQUYiLz4KPC9zdmc+'"
+              />
+            </div>
+          </div>
+          <div class="hero-right">
+            <h1 class="hero-title">
+              Hi, I'm <span class="highlight">Jeremiah Tani</span>
+            </h1>
+            <p class="hero-subtitle">Full Stack Developer & Network Engineer</p>
+
+            <!-- Profile Switcher -->
+            <div class="profile-switcher">
+              <button class="profile-btn active" data-profile="fullstack">
+                <i class="fas fa-code"></i>
+                Full Stack Developer
+              </button>
+              <button class="profile-btn" data-profile="network">
+                <i class="fas fa-network-wired"></i>
+                Network Engineer
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile Content Section -->
+    <section class="profile-content">
+      <div class="container">
+        <!-- Full Stack Developer Profile -->
+        <div id="fullstack-profile" class="profile active">
+          <!-- CV Download -->
+          <div class="cv-download">
+            <a
+              href="cv/Jeremiah-Tani-Full-Stack-Developer-CV _20250726_175347_0000.pdf"
+              class="cv-btn"
+              target="_blank"
+            >
+              <i class="fas fa-download"></i>
+              Download Full Stack Developer CV
+            </a>
+          </div>
+
+          <!-- Tech Stack -->
+          <div class="tech-stack">
+            <h2>Tech Stack</h2>
+            <div class="tech-grid">
+              <div class="tech-item">
+                <i class="fab fa-html5"></i>
+                <span>HTML5</span>
+              </div>
+              <div class="tech-item">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS3</span>
+              </div>
+              <div class="tech-item">
+                <i class="fab fa-js-square"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="tech-item">
+                <i class="fab fa-react"></i>
+                <span>React</span>
+              </div>
+              <div class="tech-item">
+                <i class="fab fa-node-js"></i>
+                <span>Node.js</span>
+              </div>
+              <div class="tech-item">
+                <i class="fas fa-database"></i>
+                <span>PocketBase</span>
+              </div>
+              <div class="tech-item">
+                <i class="fab fa-git-alt"></i>
+                <span>Git</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projects -->
+          <div class="projects">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+              <div class="project-card">
+                <h3>Project Eden</h3>
+                <p>
+                  Project Eden is a free herbal guide that provides users with
+                  natural remedies for ailments searched. It's powered by the
+                  Google Flan LLM to answer user medical related queries.
+                </p>
+                <div class="project-tech">
+                  <span>HTML5</span>
+                  <span>CSS</span>
+                  <span>Vanilla Javascript</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/AchieverDc/Project-Eden"
+                    class="project-link"
+                    target="/"
+                    ><i class="fab fa-github"></i> GitHub</a
+                  >
+                  <a
+                    href="https://project-eden-jeta.vercel.app/"
+                    class="project-link"
+                    target="/"
+                    ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                  >
+                </div>
+              </div>
+              <div class="project-card">
+                <h3>Fundara</h3>
+                <p>
+                  Fundara is a smart contract deployed on the Arbitrum Sepolia
+                  blockchain, with the sole aim of decentralizing disaster
+                  management reports by enabling users to create, update, and
+                  delete disaster reports through a secure and transparent
+                  platform. It leverages Ethereum's Solidity language and stores
+                  disaster data such as type, location, severity, and media
+                  (images) in a structured and immutable manner.
+                </p>
+                <div class="project-tech">
+                  <span>React</span>
+                  <span>Solidity</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/Chigozie0706/fundara"
+                    class="project-link"
+                    target="/"
+                    ><i class="fab fa-github"></i> GitHub</a
+                  >
+                  <a
+                    href="https://fundara.vercel.app/"
+                    class="project-link"
+                    target="/"
+                    ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                  >
+                </div>
+              </div>
+              <div class="project-card">
+                <h3>Network Engineer Toolkit</h3>
+                <p>
+                  Network Engineer Toolkit is a web application designed to
+                  assist network engineers in managing and troubleshooting
+                  network configurations. It provides tools for IP address
+                  management, subnet calculations, and network device
+                  monitoring.
+                </p>
+                <div class="project-tech">
+                  <span>HTML5</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/AchieverDc/Network-Engineer-Toolkit"
+                    class="project-link"
+                    target="/"
+                    ><i class="fab fa-github"></i> GitHub</a
+                  >
+                  <a
+                    href="https://network-engineer-toolkit.vercel.app/"
+                    class="project-link"
+                    target="/"
+                    ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Network Engineer Profile -->
+        <div id="network-profile" class="profile">
+          <!-- CV Download -->
+          <div class="cv-download">
+            <a
+              href="cv/Jeremiah-Tani-Network-Engineer-CV_20250726_180136_0000.pdf"
+              class="cv-btn"
+              target="_blank"
+            >
+              <i class="fas fa-download"></i>
+              Download Network Engineer CV
+            </a>
+          </div>
+
+          <!-- Tech Stack -->
+          <div class="tech-stack">
+            <h2>Technologies & Platforms</h2>
+            <div class="tech-grid">
+              <div class="tech-item">
+                <i class="fas fa-network-wired"></i>
+                <span>Cisco IOS</span>
+              </div>
+              <div class="tech-item">
+                <i class="fas fa-router"></i>
+                <span>MikroTik</span>
+              </div>
+              <div class="tech-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>pfSense</span>
+              </div>
+              <div class="tech-item">
+                <i class="fas fa-search"></i>
+                <span>Wireshark</span>
+              </div>
+              <div class="tech-item">
+                <i class="fas fa-sitemap"></i>
+                <span>VLAN</span>
+              </div>
+              <div class="tech-item">
+                <i class="fas fa-route"></i>
+                <span>OSPF</span>
+              </div>
+              <div class="tech-item">
+                <i class="fas fa-lock"></i>
+                <span>VPN</span>
+              </div>
+              <div class="tech-item">
+                <i class="fas fa-project-diagram"></i>
+                <span>GNS3</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projects -->
+          <div class="projects">
+            <h2>Network Projects</h2>
+            <div class="projects-grid">
+              <div class="project-card">
+                <h3>Enterprise Hotel Network Design</h3>
+                <p>
+                  Designed and implemented a scalable network infrastructure for
+                  a 100+ hotel room facility with redundancy and security.
+                </p>
+                <div class="project-tech">
+                  <span>StarLink</span>
+                  <span>OSPF</span>
+                  <span>VLAN</span>
+                  <span>Gigabit Switch</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" class="project-link"
+                    ><i class="fas fa-file-alt"></i> Documentation</a
+                  >
+                  <a href="#" class="project-link"
+                    ><i class="fas fa-sitemap"></i> Network Diagram</a
+                  >
+                </div>
+              </div>
+              <div class="project-card">
+                <h3>Enterprise Hotel Network Design</h3>
+                <p>
+                  Installed starlink satelite antenna and router, and installed
+                  tp-link outdoor APs to increase signal roaming for customers
+                  and employees.
+                </p>
+                <div class="project-tech">
+                  <span>StarLink</span>
+                  <span>TP-Link</span>
+                  <span>Outdoor APs</span>
+                  <span>Gigabit Switch</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" class="project-link"
+                    ><i class="fas fa-file-alt"></i> Documentation</a
+                  >
+                  <a href="#" class="project-link"
+                    ><i class="fas fa-sitemap"></i> Network Diagram</a
+                  >
+                </div>
+              </div>
+              <div class="project-card">
+                <h3>Network Security Audit</h3>
+                <p>
+                  Conducted comprehensive security assessment and implemented
+                  hardening measures for critical infrastructure.
+                </p>
+                <div class="project-tech">
+                  <span>Nmap</span>
+                  <span>pfSense</span>
+                  <span>IDS/IPS</span>
+                  <span>Network Monitoring</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" class="project-link"
+                    ><i class="fas fa-shield-alt"></i> Security Report</a
+                  >
+                  <a href="#" class="project-link"
+                    ><i class="fas fa-cog"></i> Configuration Guide</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-content">
+          <h2>About Me</h2>
+          <div class="about-text">
+            <p>
+              I'm a passionate technology professional with expertise spanning
+              both software development and network infrastructure. With over 2
+              years of experience in the tech industry, I bring a unique
+              perspective that bridges the gap between application development
+              and network engineering.
+            </p>
+
+            <p>
+              As a Full Stack Developer, I create robust, scalable web
+              applications using modern technologies like React, Node.js, and
+              cloud platforms. My development approach focuses on clean code,
+              user experience, and performance optimization.
+            </p>
+
+            <p>
+              In my Network Engineer role, I design and maintain critical
+              infrastructure, implement security protocols, and ensure optimal
+              network performance. I have extensive experience with Cisco and
+              TP-Link systems, network security, and enterprise-level
+              implementations.
+            </p>
+
+            <p>
+              This dual expertise allows me to understand how applications
+              interact with network infrastructure, leading to more efficient
+              and secure solutions. I'm always eager to take on new challenges
+              and contribute to innovative projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="contact-content">
+          <h2>Get In Touch</h2>
+          <p>Let's discuss how we can work together on your next project.</p>
+
+          <div class="contact-wrapper">
+            <div>
+              <form id="contact-form">
+                <div class="form-group">
+                  <input
+                    class="name-box"
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                    name="name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    input
+                    class="email-box"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="Subject"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <textarea
+                    class="msg-box"
+                    name="message"
+                    id="message"
+                    placeholder="Your Message"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+              </form>
+            </div>
+
+            <div class="contact-info">
+              <div class="social-links">
+                <a
+                  href="https://www.linkedin.com/in/jeremiah-tani-917156339"
+                  class="social-link"
+                >
+                  <i class="fab fa-linkedin"></i>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/AchieverDc" class="social-link">
+                  <i class="fab fa-github"></i>
+                  <span>GitHub</span>
+                </a>
+                <a
+                  href="https://x.com/AchieverD31943?t=1QFIGBi-a2nuErqtMMTO9Q&s=09"
+                  class="social-link"
+                >
+                  <i class="fab fa-twitter"></i>
+                  <span>Twitter</span>
+                </a>
+                <a
+                  href="https://wa.me/2349051807913?text=Hello%20I%20would%20like%20to%20know%20more%20about%20your%20services"
+                  class="social-link"
+                >
+                  <i class="fab fa-whatsapp"></i>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Jeremiah Tani. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
