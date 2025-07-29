@@ -5,7 +5,7 @@ const navMenu = document.querySelector(".nav-menu");
 const navLinks = document.querySelectorAll(".nav-link");
 const profileBtns = document.querySelectorAll(".profile-btn");
 const profiles = document.querySelectorAll(".profile");
-const contactForm = document.querySelector(".contact-form form");
+const contactForm = document.getElementById("contact-form");
 
 // Theme Management
 class ThemeManager {
@@ -14,11 +14,9 @@ class ThemeManager {
   }
 
   init() {
-    // Check for saved theme preference or default to light mode
     const savedTheme = localStorage.getItem("theme") || "light";
     this.setTheme(savedTheme);
 
-    // Theme toggle event listener
     themeToggle.addEventListener("click", () => {
       const currentTheme = document.documentElement.getAttribute("data-theme");
       const newTheme = currentTheme === "dark" ? "light" : "dark";
@@ -29,8 +27,6 @@ class ThemeManager {
   setTheme(theme) {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
-
-    // Update theme toggle icon
     const icon = themeToggle.querySelector("i");
     if (theme === "dark") {
       icon.className = "fas fa-sun";
@@ -47,13 +43,11 @@ class NavigationManager {
   }
 
   init() {
-    // Mobile menu toggle
     hamburger.addEventListener("click", () => {
       hamburger.classList.toggle("active");
       navMenu.classList.toggle("active");
     });
 
-    // Close mobile menu when clicking on a link
     navLinks.forEach((link) => {
       link.addEventListener("click", () => {
         hamburger.classList.remove("active");
@@ -61,15 +55,13 @@ class NavigationManager {
       });
     });
 
-    // Smooth scrolling for navigation links
     navLinks.forEach((link) => {
       link.addEventListener("click", (e) => {
         e.preventDefault();
         const targetId = link.getAttribute("href");
         const targetSection = document.querySelector(targetId);
-
         if (targetSection) {
-          const offsetTop = targetSection.offsetTop - 70; // Account for fixed navbar
+          const offsetTop = targetSection.offsetTop - 70;
           window.scrollTo({
             top: offsetTop,
             behavior: "smooth",
@@ -78,7 +70,6 @@ class NavigationManager {
       });
     });
 
-    // Update active nav link on scroll
     this.updateActiveNavLink();
     window.addEventListener("scroll", () => this.updateActiveNavLink());
   }
@@ -126,7 +117,6 @@ class ProfileSwitcher {
   switchProfile(profileType) {
     if (profileType === this.currentProfile) return;
 
-    // Update button states
     profileBtns.forEach((btn) => {
       btn.classList.remove("active");
       if (btn.getAttribute("data-profile") === profileType) {
@@ -134,7 +124,6 @@ class ProfileSwitcher {
       }
     });
 
-    // Hide current profile with fade out effect
     const currentProfileEl = document.getElementById(
       `${this.currentProfile}-profile`
     );
@@ -146,8 +135,6 @@ class ProfileSwitcher {
     setTimeout(() => {
       currentProfileEl.classList.remove("active");
       newProfileEl.classList.add("active");
-
-      // Show new profile with fade in effect
       setTimeout(() => {
         newProfileEl.style.opacity = "1";
         newProfileEl.style.transform = "translateY(0)";
@@ -155,8 +142,6 @@ class ProfileSwitcher {
     }, 300);
 
     this.currentProfile = profileType;
-
-    // Update page title based on active profile
     this.updatePageTitle(profileType);
   }
 
@@ -181,10 +166,7 @@ class AnimationManager {
   }
 
   init() {
-    // Intersection Observer for scroll animations
     this.observeElements();
-
-    // Add loading animation to initial elements
     this.addLoadingAnimations();
   }
 
@@ -202,7 +184,6 @@ class AnimationManager {
       });
     }, options);
 
-    // Observe elements for animation
     const elementsToAnimate = document.querySelectorAll(
       ".tech-item, .project-card, .about-content, .contact-form"
     );
@@ -210,14 +191,12 @@ class AnimationManager {
   }
 
   addLoadingAnimations() {
-    // Add staggered loading animation to tech items
     const techItems = document.querySelectorAll(".tech-item");
     techItems.forEach((item, index) => {
       item.style.animationDelay = `${index * 0.1}s`;
       item.classList.add("loading");
     });
 
-    // Add loading animation to project cards
     const projectCards = document.querySelectorAll(".project-card");
     projectCards.forEach((card, index) => {
       card.style.animationDelay = `${index * 0.2}s`;
@@ -272,15 +251,13 @@ class PerformanceManager {
   }
 
   init() {
-    // Optimize scroll events
     window.addEventListener(
       "scroll",
       Utils.throttle(() => {
         this.handleScroll();
       }, 16)
-    ); // ~60fps
+    );
 
-    // Optimize resize events
     window.addEventListener(
       "resize",
       Utils.debounce(() => {
@@ -288,15 +265,11 @@ class PerformanceManager {
       }, 250)
     );
 
-    // Preload critical resources
     this.preloadResources();
   }
 
   handleScroll() {
-    // Add scroll-based optimizations here
     const scrollTop = window.pageYOffset;
-
-    // Parallax effect for hero section (optional)
     const hero = document.querySelector(".hero");
     if (hero && scrollTop < hero.offsetHeight) {
       hero.style.transform = `translateY(${scrollTop * 0.1}px)`;
@@ -304,10 +277,7 @@ class PerformanceManager {
   }
 
   handleResize() {
-    // Handle responsive adjustments
     const width = window.innerWidth;
-
-    // Close mobile menu if window becomes wide
     if (width > 768) {
       hamburger.classList.remove("active");
       navMenu.classList.remove("active");
@@ -315,12 +285,10 @@ class PerformanceManager {
   }
 
   preloadResources() {
-    // Preload CV files
     const cvLinks = [
       "cv/Jeremiah-Tani-Full-Stack-Developer-CV _20250726_175347_0000.pdf",
       "cv/Jeremiah-Tani-Network-Engineer-CV_20250726_180136_0000.pdf",
     ];
-
     cvLinks.forEach((link) => {
       const linkEl = document.createElement("link");
       linkEl.rel = "prefetch";
@@ -337,13 +305,10 @@ class ErrorHandler {
   }
 
   init() {
-    // Global error handling
     window.addEventListener("error", (e) => {
       console.error("Global error:", e.error);
-      // Could send to error tracking service
     });
 
-    // Handle image loading errors
     document.addEventListener(
       "error",
       (e) => {
@@ -356,7 +321,6 @@ class ErrorHandler {
   }
 
   handleImageError(img) {
-    // Replace broken images with placeholder
     if (!img.dataset.errorHandled) {
       img.dataset.errorHandled = "true";
       img.src =
@@ -365,65 +329,22 @@ class ErrorHandler {
   }
 }
 
-// Initialize Application
-class App {
-  constructor() {
-    this.init();
-  }
-
-  init() {
-    // Wait for DOM to be fully loaded
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", () =>
-        this.initializeComponents()
-      );
-    } else {
-      this.initializeComponents();
-    }
-  }
-
-  initializeComponents() {
-    try {
-      // Initialize all managers
-      new ThemeManager();
-      new NavigationManager();
-      new ProfileSwitcher();
-      new AnimationManager();
-      new FormManager();
-      new PerformanceManager();
-      new ErrorHandler();
-
-      // Add loaded class to body for any CSS animations
-      document.body.classList.add("loaded");
-
-      console.log("Portfolio website initialized successfully");
-    } catch (error) {
-      console.error("Error initializing application:", error);
-    }
-  }
-}
-
 // Contact Form Manager
 class FormManager {
-  constructor(formId) {
+  constructor() {
     this.contactForm = document.getElementById("contact-form");
     this.submitBtn = this.contactForm?.querySelector(".submit-btn");
-
     if (this.contactForm) {
       this.contactForm.addEventListener("submit", (e) =>
         this.handleFormSubmit(e)
       );
-    } else {
-      console.error(`Form with ID "contact-form" not found.`);
     }
   }
 
   handleFormSubmit(e) {
     e.preventDefault();
-
     const formData = new FormData(this.contactForm);
     const data = Object.fromEntries(formData);
-
     if (this.validateForm(data)) {
       this.sendFormData(data);
     } else {
@@ -433,13 +354,8 @@ class FormManager {
 
   validateForm(data) {
     const { name, email, subject, message } = data;
-
-    // Basic empty check
-    if (!name.trim() || !email.trim() || !subject.trim() || !message.trim()) {
+    if (!name.trim() || !email.trim() || !subject.trim() || !message.trim())
       return false;
-    }
-
-    // Email pattern validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
@@ -448,12 +364,9 @@ class FormManager {
     try {
       const response = await fetch("/api/sendEmail", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
-
       if (response.ok) {
         this.showSuccessMessage("Message Sent Successfully!");
         this.contactForm.reset();
@@ -469,11 +382,9 @@ class FormManager {
 
   showSuccessMessage(message) {
     if (!this.submitBtn) return;
-
     const originalText = this.submitBtn.textContent;
     this.submitBtn.textContent = message;
     this.submitBtn.style.background = "#10b981";
-
     setTimeout(() => {
       this.submitBtn.textContent = originalText;
       this.submitBtn.style.background = "";
@@ -482,11 +393,9 @@ class FormManager {
 
   showErrorMessage(message) {
     if (!this.submitBtn) return;
-
     const originalText = this.submitBtn.textContent;
     this.submitBtn.textContent = message;
     this.submitBtn.style.background = "#ef4444";
-
     setTimeout(() => {
       this.submitBtn.textContent = originalText;
       this.submitBtn.style.background = "";
@@ -494,10 +403,128 @@ class FormManager {
   }
 }
 
-// Initialize the form manager
-document.addEventListener("DOMContentLoaded", () => {
-  new FormManager("contact-form");
-});
+// === SHOP MANAGER ===
+function handleBuyClick() {
+  alert("Purchase functionality coming soon!");
+}
+
+class ShopManager {
+  constructor() {
+    this.products = [];
+    this.modal = document.getElementById("product-modal");
+    this.grid = document.getElementById("products-grid");
+    this.loading = document.getElementById("loading-products");
+    this.init();
+  }
+
+  async init() {
+    await this.loadProducts();
+    this.renderProducts();
+    this.attachModalEvents();
+  }
+
+  async loadProducts() {
+    try {
+      const response = await fetch("assets/products.json");
+      if (!response.ok) throw new Error("Failed to load products");
+      this.products = await response.json();
+    } catch (error) {
+      console.error("Error loading products:", error);
+      this.grid.innerHTML = `<p style="color: #ef4444; grid-column: 1/-1;">Failed to load products. Please try again later.</p>`;
+      this.loading.style.display = "none";
+    }
+  }
+
+  renderProducts() {
+    if (!this.products.length) return;
+
+    this.grid.innerHTML = this.products
+      .map(
+        (product) => `
+      <div class="product-card" data-product="${product.id}">
+        <img src="${product.image}" alt="${product.title}" />
+        <h3>${product.title}</h3>
+        <p class="product-price">${product.price}</p>
+        <p class="product-desc">${product.description}</p>
+      </div>
+    `
+      )
+      .join("");
+
+    this.loading.style.display = "none";
+  }
+
+  attachModalEvents() {
+    this.grid.addEventListener("click", (e) => {
+      const card = e.target.closest(".product-card");
+      if (!card) return;
+
+      const productId = card.dataset.product;
+      const product = this.products.find((p) => p.id === productId);
+      if (!product) return;
+
+      document.getElementById("modal-product-img").src = product.image;
+      document.getElementById("modal-product-img").alt = product.title;
+      document.getElementById("modal-product-title").textContent =
+        product.title;
+      document.getElementById("modal-product-price").textContent =
+        product.price;
+      document.getElementById("modal-product-desc").textContent =
+        product.description;
+
+      this.modal.style.display = "flex";
+    });
+
+    document.querySelector(".modal-close").addEventListener("click", () => {
+      this.modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === this.modal) {
+        this.modal.style.display = "none";
+      }
+    });
+  }
+}
+
+// Initialize Application
+class App {
+  constructor() {
+    this.init();
+  }
+
+  init() {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", () =>
+        this.initializeComponents()
+      );
+    } else {
+      this.initializeComponents();
+    }
+  }
+
+  initializeComponents() {
+    try {
+      new ThemeManager();
+      new NavigationManager();
+      new ProfileSwitcher();
+      new AnimationManager();
+      new FormManager();
+      new PerformanceManager();
+      new ErrorHandler();
+
+      // Initialize Shop if shop section exists
+      if (document.getElementById("shop")) {
+        new ShopManager();
+      }
+
+      document.body.classList.add("loaded");
+      console.log("Portfolio website initialized successfully");
+    } catch (error) {
+      console.error("Error initializing application:", error);
+    }
+  }
+}
 
 // Start the application
 new App();

@@ -29,6 +29,7 @@
         <ul class="nav-menu">
           <li><a href="#home" class="nav-link">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#shop" class="nav-link">Shop</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
           <li>
             <button id="theme-toggle" class="theme-btn">
@@ -62,7 +63,6 @@
               Hi, I'm <span class="highlight">Jeremiah Tani</span>
             </h1>
             <p class="hero-subtitle">Full Stack Developer & Network Engineer</p>
-
             <!-- Profile Switcher -->
             <div class="profile-switcher">
               <button class="profile-btn active" data-profile="fullstack">
@@ -95,7 +95,6 @@
               Download Full Stack Developer CV
             </a>
           </div>
-
           <!-- Tech Stack -->
           <div class="tech-stack">
             <h2>Tech Stack</h2>
@@ -130,7 +129,6 @@
               </div>
             </div>
           </div>
-
           <!-- Projects -->
           <div class="projects">
             <h2>Featured Projects</h2>
@@ -151,13 +149,13 @@
                   <a
                     href="https://github.com/AchieverDc/Project-Eden"
                     class="project-link"
-                    target="/"
+                    target="_blank"
                     ><i class="fab fa-github"></i> GitHub</a
                   >
                   <a
                     href="https://project-eden-jeta.vercel.app/"
                     class="project-link"
-                    target="/"
+                    target="_blank"
                     ><i class="fas fa-external-link-alt"></i> Live Demo</a
                   >
                 </div>
@@ -181,13 +179,13 @@
                   <a
                     href="https://github.com/Chigozie0706/fundara"
                     class="project-link"
-                    target="/"
+                    target="_blank"
                     ><i class="fab fa-github"></i> GitHub</a
                   >
                   <a
                     href="https://fundara.vercel.app/"
                     class="project-link"
-                    target="/"
+                    target="_blank"
                     ><i class="fas fa-external-link-alt"></i> Live Demo</a
                   >
                 </div>
@@ -210,13 +208,13 @@
                   <a
                     href="https://github.com/AchieverDc/Network-Engineer-Toolkit"
                     class="project-link"
-                    target="/"
+                    target="_blank"
                     ><i class="fab fa-github"></i> GitHub</a
                   >
                   <a
                     href="https://network-engineer-toolkit.vercel.app/"
                     class="project-link"
-                    target="/"
+                    target="_blank"
                     ><i class="fas fa-external-link-alt"></i> Live Demo</a
                   >
                 </div>
@@ -224,7 +222,6 @@
             </div>
           </div>
         </div>
-
         <!-- Network Engineer Profile -->
         <div id="network-profile" class="profile">
           <!-- CV Download -->
@@ -238,7 +235,6 @@
               Download Network Engineer CV
             </a>
           </div>
-
           <!-- Tech Stack -->
           <div class="tech-stack">
             <h2>Technologies & Platforms</h2>
@@ -277,7 +273,6 @@
               </div>
             </div>
           </div>
-
           <!-- Projects -->
           <div class="projects">
             <h2>Network Projects</h2>
@@ -365,14 +360,12 @@
               perspective that bridges the gap between application development
               and network engineering.
             </p>
-
             <p>
               As a Full Stack Developer, I create robust, scalable web
               applications using modern technologies like React, Node.js, and
               cloud platforms. My development approach focuses on clean code,
               user experience, and performance optimization.
             </p>
-
             <p>
               In my Network Engineer role, I design and maintain critical
               infrastructure, implement security protocols, and ensure optimal
@@ -380,7 +373,6 @@
               TP-Link systems, network security, and enterprise-level
               implementations.
             </p>
-
             <p>
               This dual expertise allows me to understand how applications
               interact with network infrastructure, leading to more efficient
@@ -392,13 +384,48 @@
       </div>
     </section>
 
+    <!-- Shop Section -->
+    <section id="shop" class="shop">
+      <div class="container">
+        <div class="shop-content">
+          <h2>Our Products</h2>
+          <p>
+            Explore our collection of premium tech tools and digital products.
+          </p>
+
+          <!-- Product Dashboard -->
+          <div class="products-grid" id="products-grid">
+            <!-- Products loaded dynamically -->
+          </div>
+
+          <!-- Loading Indicator -->
+          <div id="loading-products">
+            <p>Loading products...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Detail Modal -->
+    <div id="product-modal" class="product-modal" style="display: none">
+      <div class="product-modal-content">
+        <span class="modal-close">&times;</span>
+        <img id="modal-product-img" src="" alt="" />
+        <div class="product-details">
+          <h2 id="modal-product-title"></h2>
+          <p class="product-price" id="modal-product-price"></p>
+          <p id="modal-product-desc"></p>
+          <button class="submit-btn" onclick="handleBuyClick()">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
       <div class="container">
         <div class="contact-content">
           <h2>Get In Touch</h2>
           <p>Let's discuss how we can work together on your next project.</p>
-
           <div class="contact-wrapper">
             <div>
               <form id="contact-form">
@@ -445,7 +472,6 @@
                 <button type="submit" class="submit-btn">Send Message</button>
               </form>
             </div>
-
             <div class="contact-info">
               <div class="social-links">
                 <a

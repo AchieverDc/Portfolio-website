@@ -1,0 +1,16 @@
+[
+  {
+    "id": "product1",
+    "title": "MTN 4G Mi-Fi Router",
+    "price": "₦10000",
+    "description": "High-speed mobile internet solution for professionals on the go.",
+    "image": "https://shop.mtn.ng/media/catalog/product/cache/fa2d7f8322a901d3e35e3639d4fcc28a/m/t/mtn-broadband-mifi-whites.png"
+  },
+  {
+    "id": "product2",
+    "title": "Airtel 4G Office Router",
+    "price": "₦10000",
+    "description": "Suitable for small to medium-sized businesses, this router provides reliable connectivity.",
+    "image": "https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/45/845307/1.jpg?1532"
+  }
+]
